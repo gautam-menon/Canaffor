@@ -4,22 +4,20 @@ class Products extends StatefulWidget {
   @override
   _ProductsState createState() => _ProductsState();
 }
+
 class _ProductsState extends State<Products> {
   var product_list = [
     {
       "name": "HR",
       "picture": "hrserv/4.jpg",
-
     },
     {
       "name": "Consulting",
       "picture": "hrserv/1.png",
-
     },
     {
       "name": "Recruiting",
       "picture": "hrserv/3.png",
-
     },
     {
       "name": "i dont know what else your company does...",
@@ -34,7 +32,7 @@ class _ProductsState extends State<Products> {
     return GridView.builder(
         itemCount: product_list.length,
         gridDelegate:
-        new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (BuildContext context, int index) {
           return Single_prod(
             prod_name: product_list[index]['name'],
@@ -43,14 +41,16 @@ class _ProductsState extends State<Products> {
         });
   }
 }
+
 class Single_prod extends StatelessWidget {
   final prod_name;
   final prod_pricture;
+
   Single_prod({
     this.prod_name,
     this.prod_pricture,
-  }
-  );
+  });
+
   @override
   Widget build(BuildContext context) {
     return Card(

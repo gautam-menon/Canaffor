@@ -1,4 +1,5 @@
 import 'package:url_launcher/url_launcher.dart';
+
 Launchurl() async {
   const url = 'http://www.canaffor.com/hr-consulting.html';
   if (await canLaunch(url)) {
@@ -27,8 +28,9 @@ Curriculum() async {
   const url = "https://forms.gle/SxwkrQpdHABYzY2E6";
   await launch(url);
 }
-Vacancy() async {
 
-  const url = "https://www.indeedjobs.com/canaffor-corporation-c7a0e15/_hl/en_IN?cpref=JXWAtnzf3XWjLOi4YeVNLikN87qYWwuQd7OOnGAYHvg";
-      await launch(url);
+Vacancy() async {
+  const url =
+      "https://www.indeedjobs.com/canaffor-corporation-c7a0e15/_hl/en_IN?cpref=JXWAtnzf3XWjLOi4YeVNLikN87qYWwuQd7OOnGAYHvg";
+  await launch(url);
 }

@@ -371,18 +371,21 @@ class Socialmedia extends StatelessWidget {
     );
   }
 }
+
 class Vacancies extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  InkWell(
+    return InkWell(
       child: Container(
         height: 200,
-      width: 200,
-      child: Text("Click here to view all job vacancies!",
-      style:  TextStyle(
-          color: Colors.grey[800],
-          fontWeight: FontWeight.bold,
-          fontSize: 30),),
+        width: 200,
+        child: Text(
+          "Click here to view all job vacancies!",
+          style: TextStyle(
+              color: Colors.grey[800],
+              fontWeight: FontWeight.bold,
+              fontSize: 30),
+        ),
       ),
       onTap: Vacancy,
     );
