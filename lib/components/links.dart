@@ -24,6 +24,6 @@ Instagram() async {
 }
 
 Curriculum() async {
-  const url = "http://www.google.com";
+  const url = "https://forms.gle/SxwkrQpdHABYzY2E6";
   await launch(url);
 }

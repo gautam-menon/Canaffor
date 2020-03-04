@@ -287,6 +287,9 @@ class Cur extends StatelessWidget {
                         height: 500,
                         child: ListTile(
                           title: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.red,
+                            ),
                             child: Align(alignment: Alignment.center,
                               child: Text("Tap to submit CV",
                                 style: TextStyle(
