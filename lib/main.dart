@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:canaffor/components/Services.dart';
 import "package:canaffor/components/links.dart";
+import 'package:carousel_pro/carousel_pro.dart';
+import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
       home: Canaffor(),
@@ -50,10 +50,7 @@ class Canaffor extends StatelessWidget {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Partners()));
               }),
-              Customize(Icons.info, "About", () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => About()));
-              }),
+
               Customize(Icons.perm_media, "Social Media", () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Socialmedia()));
@@ -65,6 +62,10 @@ class Canaffor extends StatelessWidget {
               Customize(Icons.content_paste, "Submit your CV!", () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Cur()));
+              }),
+              Customize(Icons.info, "About", () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => About()));
               }),
             ],
           ),
@@ -198,7 +199,7 @@ class Partners extends StatelessWidget {
         dotSize: 5.0,
         indicatorBgPadding: 10,
         animationCurve: Curves.fastOutSlowIn,
-        animationDuration: Duration(milliseconds: 1000),
+        animationDuration: Duration(milliseconds: 800),
       ),
     );
     return Scaffold(
@@ -288,12 +289,9 @@ class Cur extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: InkWell(
                     child: Container(
-                        height: 500,
+                        height: 600,
                         child: ListTile(
                           title: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.red,
-                            ),
                             child: Align(
                               alignment: Alignment.center,
                               child: Text(
@@ -375,19 +373,35 @@ class Socialmedia extends StatelessWidget {
 class Vacancies extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      child: Container(
-        height: 200,
-        width: 200,
-        child: Text(
-          "Click here to view all job vacancies!",
-          style: TextStyle(
-              color: Colors.grey[800],
-              fontWeight: FontWeight.bold,
-              fontSize: 30),
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Vacancies"),
       ),
-      onTap: Vacancy,
+      body:
+      InkWell(
+        child: Container(
+          height: 700,
+          width: 500,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Colors.green, Colors.orange]
+              )
+          ),
+
+          child: Center(
+            child: Text(
+              "Tap to view all job vacancies!",
+              style: TextStyle(
+                  color: Colors.grey[800],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30),
+            ),
+          ),
+        ),
+        onTap: Vacancy,
+      ),
     );
   }
 }
